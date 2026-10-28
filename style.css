@@ -1,0 +1,236 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+html {
+    background: #080808;
+}
+
+body {
+    min-height: 100vh;
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.experiencia {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #191919 0%,
+            #080808 65%,
+            #000 100%
+        );
+}
+
+/* TELA INICIAL */
+
+.abertura {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.artistas {
+    margin-bottom: 28px;
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.abertura h1 {
+    font-size: clamp(45px, 10vw, 115px);
+    font-weight: 300;
+    letter-spacing: -4px;
+    animation: aparecer 1.5s ease both;
+}
+
+.subtitulo {
+    margin-top: 22px;
+    color: #999;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#iniciar {
+    margin-top: 42px;
+    padding: 15px 25px;
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    color: #080808;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: background 0.25s, color 0.25s;
+}
+
+#iniciar:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* TELA DA MÚSICA */
+
+.tela-musica {
+    min-height: 100vh;
+    padding: 24px;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #151515 0%,
+            #050505 68%,
+            #000 100%
+        );
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+#voltar {
+    padding: 10px 14px;
+    border: 1px solid #444;
+    background: transparent;
+    color: #f5f5f5;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+#voltar:hover {
+    background: #222;
+}
+
+/* LETRA */
+
+.letra {
+    min-height: 56vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    padding: 35px 0;
+    text-align: center;
+}
+
+.linha-letra {
+    color: #4b4b4b;
+    font-size: clamp(15px, 2.4vw, 22px);
+    line-height: 1.5;
+    font-weight: 400;
+    transition: color 0.25s, font-size 0.25s;
+}
+
+.linha-letra.ativa {
+    color: #fff;
+    font-size: clamp(20px, 3.2vw, 30px);
+    font-weight: 600;
+}
+
+/* SPOTIFY */
+
+.player-spotify {
+    width: min(560px, 100%);
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.instrucao {
+    margin-bottom: 15px;
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+#spotifyPlayer {
+    width: 100%;
+    min-height: 152px;
+}
+
+#spotifyPlayer iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+.nota-player {
+    margin-top: 12px;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ANIMAÇÃO SOMENTE NA ABERTURA */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    .tela-musica {
+        padding: 18px;
+    }
+
+    .artistas {
+        letter-spacing: 3px;
+    }
+
+    .abertura h1 {
+        letter-spacing: -2px;
+    }
+
+    .letra {
+        min-height: 52vh;
+        gap: 12px;
+    }
+
+    .linha-letra {
+        max-width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

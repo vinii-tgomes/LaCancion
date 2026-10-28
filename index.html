@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+    <title>La Canción</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="experiencia">
+
+        <section class="abertura" id="telaInicial">
+            <p class="artistas">BAD BUNNY · J BALVIN</p>
+            <h1>LA CANCIÓN</h1>
+            <p class="subtitulo">Algumas músicas trazem tudo de volta.</p>
+            <button id="iniciar" type="button">
+                Iniciar experiência
+            </button>
+        </section>
+
+        <section class="tela-musica" id="telaMusica" hidden>
+            <nav class="navegacao">
+                <button id="voltar" type="button">← Voltar</button>
+                <span>LA CANCIÓN</span>
+            </nav>
+
+            <div class="letra" id="letra" aria-live="polite">
+    <p class="linha-letra">Yeh, yeh</p>
+    <p class="linha-letra">Que cantamos bien borrachos</p>
+    <p class="linha-letra">Que bailamos bien borrachos</p>
+    <p class="linha-letra">Nos besamos bien borrachos los dos, ey, ey</p>
+    <p class="linha-letra">Y hace tiempo que no venías a mi cabeza</p>
+    <p class="linha-letra">Pero ya van par de cervezas</p>
+    <p class="linha-letra">Y me acordé de cómo tú me besas</p>
+    <p class="linha-letra">De to' los polvos encima 'e la mesa</p>
+    <p class="linha-letra">Y en el carro, la playa, el motel</p>
+    <p class="linha-letra">En casa de tu pai, cuando yo te iba a ver</p>
+            </div>
+
+
+            <div class="player-spotify">
+                <p class="instrucao">DÊ PLAY NA MÚSICA</p>
+                <div id="spotifyPlayer"></div>
+                <p class="nota-player" id="estadoPlayer">
+                    A letra acompanhará a reprodução.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://open.spotify.com/embed/iframe-api/v1"></script>
+    <script src="script.js"></script>
+</body>
+</html>
